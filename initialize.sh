@@ -64,21 +64,41 @@ do
     ARGS="--network $NETWORK --identity token-admin"
 
     echo Deploy the title contract
+    WASM_PATH="contract/target/wasm32-unknown-unknown/release/title_contract.wasm"
     TITLE_ID="$(
     soroban contract deploy $ARGS \
-        --wasm contract/target/wasm32-unknown-unknown/release/title_contract.wasm
+        --wasm $WASM_PATH
     )"
 
     echo "Contract deployed in $NETWORK network succesfully with ID: $TITLE_ID"
 
     tmp=$(mktemp)
     jq ".$NETWORK.title_id = \"$TITLE_ID\"" src/contract_ids.json > "$tmp" && mv "$tmp" src/contract_ids.json
+
+
+    echo "Setting the first title: My $NETWORK title"
+
+    soroban contract invoke \
+    $ARGS \
+    --wasm contract/target/wasm32-unknown-unknown/release/title_contract.wasm \
+    --id $TITLE_ID \
+    --fn set_title --\
+    --title $NETWORK
+    
     echo "Done"
     echo "--"
     echo "--"
     echo "--"
 
+    soroban contract invoke \
+    $ARGS \
+    --wasm contract/target/wasm32-unknown-unknown/release/title_contract.wasm \
+    --id $TITLE_ID \
+    --fn read_title
+
+
 done
 
 echo "We have our src/contract_ids.json file:"
 cat src/contract_ids.json
+chmod 777 src/contract_ids.json
