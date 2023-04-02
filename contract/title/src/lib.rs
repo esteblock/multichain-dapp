@@ -1,5 +1,5 @@
 #![no_std]
-use soroban_sdk::{contractimpl, symbol, Env, Symbol};
+use soroban_sdk::{contractimpl, symbol, Env, Symbol, Bytes};
 
 const TITLE: Symbol = symbol!("TITLE");
 
@@ -9,12 +9,14 @@ pub struct TitleContract;
 impl TitleContract {
 
 
-    pub fn set_title(env: Env, title: Symbol) {
+    pub fn set_title(env: Env, title: Bytes) {
                 env.storage().set(&TITLE, &title)
     }
 
-    pub fn read_title(env: Env) -> Symbol {
-        env.storage().get_unchecked(&TITLE).unwrap()
+    pub fn read_title(env: Env) -> Bytes {
+        env.storage().get_unchecked(&TITLE)
+        //.unwrap_or(Bytes::from_slice(&env, b"Default Title")) // Default title
+        .unwrap() // Panic if the value of COUNTER is not u32.
     }
     
 } 

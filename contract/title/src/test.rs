@@ -1,7 +1,7 @@
 #![cfg(test)]
 
 use super::*;
-use soroban_sdk::{symbol, Env};
+use soroban_sdk::{Env, Bytes};
 
 
 #[test]
@@ -10,9 +10,12 @@ fn test() {
     let contract_id = env.register_contract(None, TitleContract);
     let client = TitleContractClient::new(&env, &contract_id);
 
-    client.set_title(&symbol!("Hello"));
-    let client_title = client.read_title(); 
+    // let client_default_title = client.read_title(); 
+    // assert_eq!(client_default_title, Bytes::from_slice(&env, b"Default Title"));
 
-    assert_eq!(client_title, symbol!("Hello"));
+    client.set_title(&Bytes::from_slice(&env, b"New Title"));
+    let client_new_title = client.read_title(); 
+
+    assert_eq!(client_new_title, Bytes::from_slice(&env, b"New Title"));
 
 }
