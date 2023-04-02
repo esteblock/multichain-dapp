@@ -1,7 +1,7 @@
 import React from 'react';
 import SwapGrid from './ComponentsGrid';
 import ButtonAppBar from './ButtonAppBar';
-import MySorobanReactProvider from '../soroban/MySorobanReactProvider';
+import MySorobanReactProvider from '../MySorobanReactProvider';
 
 
 export default function MyApp() {
