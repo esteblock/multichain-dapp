@@ -1,4 +1,5 @@
 contract/target
+.soroban
 # Logs
 logs
 *.log
