@@ -3,7 +3,6 @@ resolver = "2"
 
 members = [   
     "title",
-    "hello_world"
 ]
 
 [profile.release-with-logs]
