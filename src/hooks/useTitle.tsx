@@ -7,6 +7,9 @@ import * as SorobanClient from 'soroban-client';
 
 
 export function scvalToString(value: SorobanClient.xdr.ScVal): string | undefined {
+  console.log("value.obj(): ", value.obj())
+  console.log("value.obj()?.bin(): ", value.obj()?.bin())
+  console.log("value.obj()?.bin().toString(): ", value.obj()?.bin().toString())
   return value.obj()?.bin().toString();
 }
 
@@ -27,7 +30,7 @@ export function useTitle({sorobanContext}: useTitleProps){
       let title   
       
       title_scval = useContractValue({ 
-        contractId: '8dcbff6d3f543575a2cb763bac9858df483597a9449cace64f608d8e76faf08e',
+        contractId: 'b6f037e2236ca326215510c64851e9ffc12fe0cc2b7f289d540ebac5a4e34035',
         method: 'read_title',
         sorobanContext: sorobanContext
       })

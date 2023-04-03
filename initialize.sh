@@ -84,7 +84,7 @@ do
     --wasm contract/target/wasm32-unknown-unknown/release/title_contract.wasm \
     --id $TITLE_ID \
     --fn set_title --\
-    --title $NETWORK
+    --title 'AB'
     
     #'{"object":{"bytes":"my title"}}'
     echo "Done"
