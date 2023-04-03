@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import ComponentsGrid from '../src/components/ComponentsGrid';
 import ButtonAppBar from '../src/components/ButtonAppBar';
-import MySorobanReactProvider from '../src/soroban/MySorobanReactProvider';
+import MySorobanReactProvider from '../src/MySorobanReactProvider';
 
 const inter = Inter({ subsets: ['latin'] })
 

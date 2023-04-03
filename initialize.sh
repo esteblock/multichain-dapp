@@ -8,6 +8,7 @@ echo Build the title contract
 
 cd contract/title
 cargo build --target wasm32-unknown-unknown --release
+cargo test
 cd ..
 cd ..
 
@@ -83,8 +84,9 @@ do
     --wasm contract/target/wasm32-unknown-unknown/release/title_contract.wasm \
     --id $TITLE_ID \
     --fn set_title --\
-    --title 'AB'
+    --title $NETWORK
     
+    #'{"object":{"bytes":"my title"}}'
     echo "Done"
     echo "--"
     echo "--"
