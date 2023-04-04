@@ -17,17 +17,17 @@ do
     case "$NETWORK" in
     standalone)
     echo "Using standalone network"
-    SOROBAN_RPC_HOST="http://stellar:8000"
+    SOROBAN_RPC_HOST="http://stellar-standalone:8000"
     SOROBAN_RPC_URL="$SOROBAN_RPC_HOST/soroban/rpc"
     SOROBAN_NETWORK_PASSPHRASE="Standalone Network ; February 2017"
     FRIENDBOT_URL="$SOROBAN_RPC_HOST/friendbot"
     ;;
     futurenet)
     echo "Using Futurenet network"
-    SOROBAN_RPC_HOST="https://rpc-futurenet.stellar.org:443"
+    SOROBAN_RPC_HOST="http://stellar-futurenet:8000"
     SOROBAN_RPC_URL="$SOROBAN_RPC_HOST/soroban/rpc"
     SOROBAN_NETWORK_PASSPHRASE="Test SDF Future Network ; October 2022"
-    FRIENDBOT_URL="https://friendbot-futurenet.stellar.org/"
+    FRIENDBOT_URL="$SOROBAN_RPC_HOST/friendbot"
     ;;
     *)
     echo "Usage: $0 standalone|futurenet"
@@ -60,7 +60,7 @@ do
 
     # This will fail if the account already exists, but it'll still be fine.
     echo Fund token-admin account from friendbot
-    curl --silent -X POST "$FRIENDBOT_URL?addr=$TOKEN_ADMIN_ADDRESS" >/dev/null
+    curl  -X POST "$FRIENDBOT_URL?addr=$TOKEN_ADMIN_ADDRESS"
 
     ARGS="--network $NETWORK --identity token-admin"
 
@@ -72,6 +72,7 @@ do
     )"
 
     echo "Contract deployed in $NETWORK network succesfully with ID: $TITLE_ID"
+    sleep 3
 
     tmp=$(mktemp)
     jq ".$NETWORK.title_id = \"$TITLE_ID\"" src/contract_ids.json > "$tmp" && mv "$tmp" src/contract_ids.json
