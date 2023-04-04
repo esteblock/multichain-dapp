@@ -7,9 +7,9 @@ import * as SorobanClient from 'soroban-client';
 
 
 export function scvalToString(value: SorobanClient.xdr.ScVal): string | undefined {
-  console.log("value.obj(): ", value.obj())
-  console.log("value.obj()?.bin(): ", value.obj()?.bin())
-  console.log("value.obj()?.bin().toString(): ", value.obj()?.bin().toString())
+  // console.log("value.obj(): ", value.obj())
+  // console.log("value.obj()?.bin(): ", value.obj()?.bin())
+  // console.log("value.obj()?.bin().toString(): ", value.obj()?.bin().toString())
   return value.obj()?.bin().toString();
 }
 
@@ -25,23 +25,26 @@ interface useTitleProps {
 
 
 export function useTitle({sorobanContext}: useTitleProps){
+  console.log("sorobanContext: ", sorobanContext)
     //if (sorobanContext.address){
       let title_scval
-      let title   
+      let title 
+      console.log("sorobanContext.activeChain?.name?.toLocaleLowerCase(): ", sorobanContext.activeChain?.name?.toLocaleLowerCase())
+      let currentChain = sorobanContext.activeChain?.name?.toLocaleLowerCase()
+      console.log("currentChain: ", currentChain)
+      console.log("contract_ids[currentChain].title_id: ", contract_ids[currentChain]?.title_id)
       
       title_scval = useContractValue({ 
-        contractId: 'b6f037e2236ca326215510c64851e9ffc12fe0cc2b7f289d540ebac5a4e34035',
+        contractId: contract_ids[currentChain]?.title_id,
         method: 'read_title',
         sorobanContext: sorobanContext
       })
 
-      console.log("title_scval: ", title_scval)
-      console.log("title_scval: ", title_scval.result)
+      console.log("title_scval ", title_scval)
 
       if(title_scval.result){
         //token.symbol.result && convert.scvalToString(token.symbol.result)?.replace("\u0000", "")
         title = title_scval.result && scvalToString(title_scval.result)?.replace("\u0000", "")
-        console.log("title: ", title)
         
         return title
       }

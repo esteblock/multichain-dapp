@@ -25,14 +25,14 @@ import contract_ids from '../contract_ids.json'
  
   const sorobanContext = useSorobanReact()
   const myTitle = useTitle({sorobanContext})
-  // const [newTitle, setNewTitle] = React.useState<string>('');
-  // const [currentTitle, setCurrentTitle] = React.useState<string>('Loading...');
+  const [newTitle, setNewTitle] = React.useState<string>('');
+  const [currentTitle, setCurrentTitle] = React.useState<string>('Loading...');
  
 
-  // const handleNewTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   setNewTitle(event.target.value)
+  const handleNewTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNewTitle(event.target.value)
     
-  // };
+  };
 
   
 
@@ -50,18 +50,18 @@ import contract_ids from '../contract_ids.json'
             id="outlined-adornment-amount"
             startAdornment={<InputAdornment position="start">
             </InputAdornment>}
-            // value={newTitle}
-           // onChange={handleNewTitleChange}
+             value={newTitle}
+            onChange={handleNewTitleChange}
             label="New title"
           />
         </FormControl>
 
       </CardContent>
-      {/* <CardActions>
+       <CardActions>
         <SetTitleButton
           newTitle={newTitle}
         ></SetTitleButton>
-      </CardActions> */}
+      </CardActions>
       
     </Card>
   );
