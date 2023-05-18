@@ -2291,21 +2291,6 @@ soroban-client@0.5.1, soroban-client@^0.5.1:
     stellar-base "8.2.2-soroban.12"
     urijs "^1.19.1"
 
-soroban-client@^0.4.0:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/soroban-client/-/soroban-client-0.4.1.tgz#76e2142fe82ac52962cbeb9f1125e19a28f1cdad"
-  integrity sha512-jeS8NkI+AxmFSpsDKlwoUX82jP3E1Isdq9gc2+vwkAba0c4i5mC4Lli2fC99guj7tA3vCeOc5xxmdts5Y1kGcw==
-  dependencies:
-    "@types/eventsource" "^1.1.2"
-    "@types/node" "18.11.9"
-    "@types/randombytes" "^2.0.0"
-    "@types/urijs" "^1.19.6"
-    axios "0.25.0"
-    es6-promise "^4.2.4"
-    lodash "4.17.21"
-    stellar-base "8.2.2-soroban.11"
-    urijs "^1.19.1"
-
 source-map-js@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"
@@ -2315,21 +2300,6 @@ source-map@^0.5.7:
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
   integrity sha512-LbrmJOMUSdEVxIKvdcJzQC+nQhe8FUZQTXQy6+I75skNgn3OoQ0DZA8YnFa7gp8tqtL3KPf1kmo0R5DoApeSGQ==
-
-stellar-base@8.2.2-soroban.11:
-  version "8.2.2-soroban.11"
-  resolved "https://registry.yarnpkg.com/stellar-base/-/stellar-base-8.2.2-soroban.11.tgz#6706c3e2eb694ffb190cabb1a0f2e6ecf1c3aac1"
-  integrity sha512-pizPJj/4Vg75n4slk3L66pzJS1+bCXsWWG7GgYiuNmzl2bKwY7cS/87PypBEDUx7msOF/ZEocGg9kJ7sU6wupg==
-  dependencies:
-    base32.js "^0.1.0"
-    bignumber.js "^4.0.0"
-    crc "^3.5.0"
-    js-xdr "^1.1.3"
-    lodash "^4.17.21"
-    sha.js "^2.3.6"
-    tweetnacl "^1.0.3"
-  optionalDependencies:
-    sodium-native "^3.3.0"
 
 stellar-base@8.2.2-soroban.12:
   version "8.2.2-soroban.12"
