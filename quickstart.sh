@@ -22,7 +22,7 @@ futurenet)
 esac
 
 
-
+shift
 
 echo "1. Creating docker soroban network"
 (docker network inspect soroban-network -f '{{.Id}}' 2>/dev/null) \
@@ -58,15 +58,12 @@ echo "2. Running a the stellar quickstart image with name=$STELLAR_NAME"
 docker run --rm -ti \
   --name $STELLAR_NAME \
   --network soroban-network \
-  -p $LOCAL_PORT:8000 \
+  -p 8000:8000 \
   stellar/quickstart:soroban-dev@sha256:a057ec6f06c6702c005693f8265ed1261e901b153a754e97cf18b0962257e872 \
   $ARGS \
   --enable-soroban-rpc \
   --protocol-version 20 \
   "$@" # Pass through args from the CLI
-
-
-
 
 
   #--platform linux/amd64 \
