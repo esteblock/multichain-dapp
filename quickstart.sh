@@ -6,14 +6,10 @@ case "$1" in
 standalone)
     echo "Using standalone network"
     ARGS="--standalone --enable-core-artificially-accelerate-time-for-testing"
-    STELLAR_NAME='stellar-standalone'
-    LOCAL_PORT='8000'
     ;;
 futurenet)
     echo "Using Futurenet network"
     ARGS="--futurenet"
-    STELLAR_NAME='stellar-futurenet'
-    LOCAL_PORT='8001'
     ;;
 *)
     echo "Usage: $0 standalone|futurenet"
@@ -21,46 +17,42 @@ futurenet)
     ;;
 esac
 
-# Run the soroban-preview container
-# Remember to do 
-# cd docker
-# bash build.sh
+shift
+
+echo "1. Creating docker soroban network"
+(docker network inspect soroban-network -f '{{.Id}}' 2>/dev/null) \
+  || docker network create soroban-network
+
+
+echo "2. Running a soroban-precview docker container"
+previewVersion="8"
 
 echo "Searching for a previous soroban-preview docker container"
-containerID=$(docker ps --filter="name=soroban-preview-7" --all --quiet)
+containerID=$(docker ps --filter=`name=soroban-preview-${previewVersion}` --all --quiet)
 if [[ ${containerID} ]]; then
-    echo "Start removing soroban-preview  container."
-    docker rm --force soroban-preview-7
-    echo "Finished removing soroban-preview container."
+    echo "Start removing soroban-preview-${previewVersion}  container."
+    docker rm --force soroban-preview-${previewVersion}
+    echo "Finished removing soroban-preview-${previewVersion} container."
 else
-    echo "No previous soroban-preview container was found"
+    echo "No previous soroban-preview-${previewVersion} container was found"
 fi
 
 currentDir=$(pwd)
-docker run --volume  ${currentDir}:/workspace \
-           --name soroban-preview-7 \
-           --interactive \
-           --tty \
-           --detach \
-           --ipc=host \
-           --network soroban-network \
-           esteblock/soroban-preview:7
+docker run -dti \
+  --volume ${currentDir}:/workspace \
+  --name soroban-preview-${previewVersion} \
+  -p 8001:8000 \
+  --ipc=host \
+  --network soroban-network \
+  esteblock/soroban-preview:${previewVersion}
 
 # Run the stellar quickstart image
 docker run --rm -ti \
-  --name $STELLAR_NAME \
+  --name stellar \
   --network soroban-network \
-  -p $LOCAL_PORT:8000 \
-  stellar/quickstart:soroban-dev@sha256:81c23da078c90d0ba220f8fc93414d0ea44608adc616988930529c58df278739 \
+  -p 8000:8000 \
+  stellar/quickstart:soroban-dev@sha256:a057ec6f06c6702c005693f8265ed1261e901b153a754e97cf18b0962257e872 \
   $ARGS \
-  --enable-soroban-rpc #\
-  #--protocol-version 20 
-
-  #--platform linux/amd64 \
-
-#   docker run --rm -it \
-#   -p 8002:8000 \
-#   --name stellar-futurenet \
-#   stellar/quickstart:soroban-dev@sha256:81c23da078c90d0ba220f8fc93414d0ea44608adc616988930529c58df278739 \
-#   --futurenet \
-#   --enable-soroban-rpc
+  --enable-soroban-rpc \
+  --protocol-version 20 \
+  "$@" # Pass through args from the CLI
