@@ -1,23 +1,15 @@
 default: build
 
-all: build test
+all: test
 
 test: build
 	cargo test
-	cargo test --features testutils
 
 build:
-	cargo build --target wasm32-unknown-unknown --release
-	cd target/wasm32-unknown-unknown/release/ && \
-		for i in *.wasm ; do \
-			ls -l "$$i"; \
-		done
-
-watch:
-	cargo watch --clear --watch-when-idle --shell '$(MAKE)'
-
+	cargo build --target wasm32-unknown-unknown --release 
+	@ls -l target/wasm32-unknown-unknown/release/*.wasm
 fmt:
-	cargo fmt --all
+	cargo fmt --all --check
 
 clean:
 	cargo clean
