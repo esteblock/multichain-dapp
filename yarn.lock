@@ -424,46 +424,37 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz#8be36a1f66f3265389e90b5f9c9962146758f728"
   integrity sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==
 
-"@soroban-react/chains@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@soroban-react/chains/-/chains-4.0.0.tgz#aa2282588717e87fefe5d2f5a4ee3f4c8694884e"
-  integrity sha512-JxQ18KadbR8qHMhSGdFfgLmLnq4uVyAYGosAAF5sRAP5R873BlFLWPrBYz1vrT2zkd947P3U1UCrQRvckr3CuA==
+"@soroban-react/chains@4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@soroban-react/chains/-/chains-4.3.1.tgz#19daa419f73d96afa6de0bffdf7001f542c9dede"
+  integrity sha512-oy/6gtVRi47xbxKUWxrb2t9pzEnY5/QQfkfbGVgAkF1skWkPwyw76dI1ZM+hS4u52st4bO0AafQaOKYzkyA/cQ==
   dependencies:
     "@soroban-react/types" "^4.0.0"
-    soroban-client "^0.4.0"
+    soroban-client "0.5.1"
 
-"@soroban-react/connect-button@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@soroban-react/connect-button/-/connect-button-4.1.0.tgz#c19a6465845234530e5c9c05a758c0f7bffe54e8"
-  integrity sha512-T7F5iE7XYoRKLjbE3jkCYHSthPnGaIGuAypWw5GLxCu3yRHRwHs9Z6xISdLaCwq0JV8xvgsrT3ToFrhd6+AZDQ==
+"@soroban-react/connect-button@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@soroban-react/connect-button/-/connect-button-4.3.1.tgz#60922b3a61be27d19460b48d2946bf42fc98887f"
+  integrity sha512-BnGzBKWoPHa2xACtWaqpi0L6Zg2ET6qiCJOAiDJyNTxh2pfcZqH7WE/4DwuRln3Vv9C5TPJipxiXbWTRSAFWiQ==
   dependencies:
-    "@soroban-react/core" "^4.1.0"
+    "@soroban-react/core" "^4.3.1"
 
-"@soroban-react/contracts@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@soroban-react/contracts/-/contracts-4.0.0.tgz#7ae644e44041b475e97735a1609ededa2364b5f6"
-  integrity sha512-uGlIzDb2lgQkcCYnfQiAPGJmPahwKspMSbgoU1Bi9U0gfeZDTfHmJPQGDiT0N4tkTWKFR/1UV92Z6EntsF/bQA==
+"@soroban-react/contracts@4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@soroban-react/contracts/-/contracts-4.3.1.tgz#3585887465e0d5588b16ad412f627b5f87e3c7b2"
+  integrity sha512-dczrHGb5xlUtdVL5HKZ1xV8DSkNQrgvuiR5AI60mps4l/FopPy1zWxQKjJblIfD3UsM3OyXhEl5+r9SYCN9nnQ==
   dependencies:
-    "@soroban-react/core" "^4.0.0"
-    soroban-client "^0.4.0"
+    "@soroban-react/core" "^4.3.1"
+    soroban-client "0.5.1"
 
-"@soroban-react/core@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@soroban-react/core/-/core-4.0.0.tgz#065d7790b02cf0cb6491c8a14f133916e5038955"
-  integrity sha512-QsK+9aNxHTGkgAERZ1Jyi9n4J7G6tJpe+KxN5DmfEcdUN+b/pOg95JwFDq9ZpkfIEWaeWpRixFEhIw4oxnaVSw==
+"@soroban-react/core@4.3.1", "@soroban-react/core@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@soroban-react/core/-/core-4.3.1.tgz#885b7bef62a88e560131594d078a966ea2530939"
+  integrity sha512-8GRPQnaTIpp3Ph1m+WfOmSahLnx/ciLYfcTcZBu2fMiAXzqzCdHOAIm18LIRiWu0+BsQnOWBw7OW8NxvSEtJaA==
   dependencies:
     "@soroban-react/freighter" "^4.0.0"
     "@soroban-react/types" "^4.0.0"
-    soroban-client "^0.4.0"
-
-"@soroban-react/core@^4.0.0", "@soroban-react/core@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@soroban-react/core/-/core-4.1.0.tgz#dd83fcb7be22182d28c596cce564679b806bbaaa"
-  integrity sha512-4Bnb8lfMxbnEWVHANU/Sp1x79RJBAYQ5eyLUCI6E0y5hI7ug0RYteawt2wvacHXB89jSLeXnUeil++6FR/lW2w==
-  dependencies:
-    "@soroban-react/freighter" "^4.0.0"
-    "@soroban-react/types" "^4.0.0"
-    soroban-client "^0.5.0"
+    soroban-client "0.5.1"
 
 "@soroban-react/freighter@4.0.0", "@soroban-react/freighter@^4.0.0":
   version "4.0.0"
@@ -478,22 +469,23 @@
   resolved "https://registry.yarnpkg.com/@soroban-react/types/-/types-4.0.0.tgz#a0e199fe586e3cf8c8e71e0f80e454b900ef15d3"
   integrity sha512-kyzaIOQxn2pV7STatQ/s5D+rBkQyd2iak/CbqM5s6KrkmfuXG3O7TStkQM6HsjK1dqHTc+BVePNld3dPB7dgvA==
 
-"@soroban-react/utils@^4.0.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@soroban-react/utils/-/utils-4.1.0.tgz#ad77de7cd3c1d024038e6460fde56e5127ba1d37"
-  integrity sha512-gmQHBPfGiPBVsjgt2cd0xrNXzBS+mROajno5AKR5n347cbkbqX0YkjsO/thiml2N+xPajTs96k5mE1AD8njCtg==
+"@soroban-react/utils@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@soroban-react/utils/-/utils-4.4.0.tgz#3789327692e0bb490e39e26b92af19de6703350d"
+  integrity sha512-avXAgsFcpsqBCyZEceXxa0GBngAQYlV5R/wwzHTWFHsiKK3hkAmGONnjkqgOpelDnLS15fV6tSRzCMRdK9gU0w==
   dependencies:
     bignumber.js "^9.1.1"
-    soroban-client "^0.5.0"
+    soroban-client "^0.5.1"
 
-"@soroban-react/wallet-data@^4.0.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@soroban-react/wallet-data/-/wallet-data-4.1.0.tgz#d15d97277fc4b87ce198a0928e37ebd0fae2c646"
-  integrity sha512-J5ljS/CCbaKpLy5frpEBARVN92Is16ZaLex9sEizOjvtOvy+U5m4haK7zBIDCVWcsgMEQUxdnmwVMGSQw1TjqA==
+"@soroban-react/wallet-data@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@soroban-react/wallet-data/-/wallet-data-4.3.1.tgz#d11bfd16652a36c9f0bdf740d711a73af51d845f"
+  integrity sha512-+o8Y47H7Y8lIJiPNblbk9vOlOA/p/VDNTL1iSvrX6WHfcsd3DhZUQVgG6MNcW1mF1P/CZbc6nM27BcRixEVAew==
   dependencies:
-    "@soroban-react/connect-button" "^4.1.0"
-    "@soroban-react/core" "^4.1.0"
+    "@soroban-react/connect-button" "^4.3.1"
+    "@soroban-react/core" "^4.3.1"
     "@soroban-react/types" "^4.0.0"
+    soroban-client "0.5.1"
 
 "@stellar/freighter-api@^1.3.1":
   version "1.3.1"
@@ -2284,6 +2276,21 @@ sodium-native@^3.3.0:
   dependencies:
     node-gyp-build "^4.3.0"
 
+soroban-client@0.5.1, soroban-client@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/soroban-client/-/soroban-client-0.5.1.tgz#331423caf9b859ffb8ded4722c86c5c2d934c1e3"
+  integrity sha512-/WkE634WoCH2catOmHyuOYds+ul3SlQ7ersMcUwRhVglvC/B0fv6r1qHc+QxT/96eckF+/P1tkvoxpSllJOXzQ==
+  dependencies:
+    "@types/eventsource" "^1.1.2"
+    "@types/node" "18.11.9"
+    "@types/randombytes" "^2.0.0"
+    "@types/urijs" "^1.19.6"
+    axios "0.25.0"
+    es6-promise "^4.2.4"
+    lodash "4.17.21"
+    stellar-base "8.2.2-soroban.12"
+    urijs "^1.19.1"
+
 soroban-client@^0.4.0:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/soroban-client/-/soroban-client-0.4.1.tgz#76e2142fe82ac52962cbeb9f1125e19a28f1cdad"
@@ -2297,21 +2304,6 @@ soroban-client@^0.4.0:
     es6-promise "^4.2.4"
     lodash "4.17.21"
     stellar-base "8.2.2-soroban.11"
-    urijs "^1.19.1"
-
-soroban-client@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/soroban-client/-/soroban-client-0.5.0.tgz#607d43763d154a3983a84f2b5c01e89bb69a63c4"
-  integrity sha512-t4P+G7YTyNcO0Wgp1ROSmcXU8Nb+/ShE+2x2BvzJNLsKTZyF/7jVFH/PKkzsrJztgHZ7gnkzh6IUCNQ5wcKYXQ==
-  dependencies:
-    "@types/eventsource" "^1.1.2"
-    "@types/node" "18.11.9"
-    "@types/randombytes" "^2.0.0"
-    "@types/urijs" "^1.19.6"
-    axios "0.25.0"
-    es6-promise "^4.2.4"
-    lodash "4.17.21"
-    stellar-base "8.2.2-soroban.12"
     urijs "^1.19.1"
 
 source-map-js@^1.0.2:
