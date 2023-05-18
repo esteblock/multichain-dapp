@@ -7,10 +7,8 @@ import * as SorobanClient from 'soroban-client';
 
 
 export function scvalToString(value: SorobanClient.xdr.ScVal): string | undefined {
-  // console.log("value.obj(): ", value.obj())
-  // console.log("value.obj()?.bin(): ", value.obj()?.bin())
-  // console.log("value.obj()?.bin().toString(): ", value.obj()?.bin().toString())
-  return value.obj()?.bin().toString();
+
+  return value.value()?.toString();
 }
 
 // export function scvalToString(value: SorobanClient.xdr.ScVal): string | undefined {
