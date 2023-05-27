@@ -5,7 +5,7 @@ set -e
 case "$1" in
 standalone)
     echo "Using standalone network"
-    ARGS="--standalone --enable-core-artificially-accelerate-time-for-testing"
+    ARGS="--standalone" # --enable-core-artificially-accelerate-time-for-testing"
     STELLAR_NAME='stellar-standalone'
     LOCAL_PORT='8000'
     ;;
@@ -30,7 +30,7 @@ echo "1. Creating docker soroban network"
 
 
 echo "2. Running a soroban-preview docker container"
-previewVersion="8"
+previewVersion="9"
 
 echo "Searching for a previous soroban-preview docker container"
 containerID=$(docker ps --filter=`name=soroban-preview-${previewVersion}` --all --quiet)
@@ -58,12 +58,13 @@ echo "2. Running a the stellar quickstart image with name=$STELLAR_NAME"
 docker run --rm -ti \
   --name $STELLAR_NAME \
   --network soroban-network \
-  -p 8000:8000 \
-  stellar/quickstart:soroban-dev@sha256:a057ec6f06c6702c005693f8265ed1261e901b153a754e97cf18b0962257e872 \
+  -p $LOCAL_PORT:8000 \
+  stellar/quickstart:soroban-dev@sha256:57e8ab498bfa14c65595fbb01cb94b1cdee9637ef2e6634e59d54f6958c05bdb \
   $ARGS \
   --enable-soroban-rpc \
   --protocol-version 20 \
   "$@" # Pass through args from the CLI
+
 
 
   #--platform linux/amd64 \
