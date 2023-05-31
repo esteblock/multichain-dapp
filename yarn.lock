@@ -432,37 +432,37 @@
     "@soroban-react/types" "^4.0.0"
     soroban-client "0.7.2"
 
-"@soroban-react/connect-button@^4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@soroban-react/connect-button/-/connect-button-4.5.2.tgz#37fac9fb2ea756cb82f0dac9c37cc17109744d12"
-  integrity sha512-I6dzE0GMAFuvLvNpdtSvB2FkUDRimZmiTIvspn/8V7Q9Y8cYcNAd0ijphJfX2HImeLhpO2GmKwBpMNFQBaCH0Q==
+"@soroban-react/connect-button@^5.0.0-alpha.0":
+  version "5.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@soroban-react/connect-button/-/connect-button-5.0.0-alpha.0.tgz#c1488d85cf676e19a33678b224f0795a367f4100"
+  integrity sha512-MxMmj0LPqF4O6ARzNH8HlseaRzLHT+e58sGqy8wmdZw8XyS7ldwY9lENrn47dLP3KvKJCg3pg51woAB5aFq3aw==
   dependencies:
-    "@soroban-react/core" "^4.5.2"
+    "@soroban-react/core" "^5.0.0-alpha.0"
 
-"@soroban-react/contracts@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@soroban-react/contracts/-/contracts-4.5.2.tgz#d18b9debca409c651190d1a03cb78a3b6fec83b2"
-  integrity sha512-3CJPfSjZSAe7xptWszyN1eqs7jQLrtrXOYGgpPUWknPbg1NX0CRKTDIYnnRx0w4NWLJaxCRGeUkTfXn5K30Vhw==
+"@soroban-react/contracts@5.0.0-alpha.0":
+  version "5.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@soroban-react/contracts/-/contracts-5.0.0-alpha.0.tgz#85e74bbcb5d5fb5f33a4cdc033a1210231ba2d2b"
+  integrity sha512-VAdBiflKtX7sN41IAG/Yon9wDBmIOcv4gvw3SNQ8r+Jg8ruxHnxvKT4GWlVDznPMJk+kKF/QQvUR2gZHRyxDBg==
   dependencies:
-    "@soroban-react/core" "^4.5.2"
+    "@soroban-react/core" "^5.0.0-alpha.0"
     soroban-client "0.7.2"
 
-"@soroban-react/core@4.5.2", "@soroban-react/core@^4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@soroban-react/core/-/core-4.5.2.tgz#b58ac1ea30b016b671a004ff886b7ebf1d6b72ed"
-  integrity sha512-QfEieymcPztn7kDNdA/pnjkcsvUxZaU66OlgP9ZSUMVgVNKyZGr5xMDMgXa/A0TeUjn/jUPbBVwGsXR5V1is8Q==
+"@soroban-react/core@5.0.0-alpha.0", "@soroban-react/core@^5.0.0-alpha.0":
+  version "5.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@soroban-react/core/-/core-5.0.0-alpha.0.tgz#6a7ff67c18f54dbeba9c6297d1578a467cb7bee1"
+  integrity sha512-16g76ZwwgDKjR4Paw0sdyCTCuJMrgHv743JypfA8Q8u46jYNUQ2iuB250pq7ocdCN9t1QR8XsFlaUgHI800Oxg==
   dependencies:
-    "@soroban-react/freighter" "^4.0.0"
+    "@soroban-react/freighter" "^5.0.0-alpha.0"
     "@soroban-react/types" "^4.0.0"
     soroban-client "0.7.2"
 
-"@soroban-react/freighter@4.0.0", "@soroban-react/freighter@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@soroban-react/freighter/-/freighter-4.0.0.tgz#1460e2104c0772a87613d1743b05daa7a17c2cf6"
-  integrity sha512-dhNkzQxi4/jDckAxytKG9on6k8ErCkzt+6tHZXz9sunTsujOp6yzKRYLLZkIeIf3A8KpqyPGvB4Sol3kJci8uA==
+"@soroban-react/freighter@5.0.0-alpha.0", "@soroban-react/freighter@^5.0.0-alpha.0":
+  version "5.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@soroban-react/freighter/-/freighter-5.0.0-alpha.0.tgz#3b398013a8e0ca8e6da32dddae55e2b016b6cb3a"
+  integrity sha512-0yV0j1FfiaIwLMURQgMw1XTzW9DW54PnNhX/UH5Nt62Cs5JYn2hnoTEpYAnQ0Z6JYMXuhXzzmeZ/ddp5NdFZJw==
   dependencies:
     "@soroban-react/types" "^4.0.0"
-    "@stellar/freighter-api" "^1.3.1"
+    "@stellar/freighter-api" "^1.4.0"
 
 "@soroban-react/types@4.0.0", "@soroban-react/types@^4.0.0":
   version "4.0.0"
@@ -477,20 +477,20 @@
     bignumber.js "^9.1.1"
     soroban-client "0.7.2"
 
-"@soroban-react/wallet-data@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@soroban-react/wallet-data/-/wallet-data-4.5.2.tgz#0825005606bfb5be4cf0b6d0bcb00d0526ce8d4b"
-  integrity sha512-xDXye6sr2y3u/IPJD0hxu+CMXCeh/6BTZSJeBn64DeG6PDDu8FbYs+v4KV1g0K5wXz+yGYD7V/CnylLSga4VPg==
+"@soroban-react/wallet-data@5.0.0-alpha.0":
+  version "5.0.0-alpha.0"
+  resolved "https://registry.yarnpkg.com/@soroban-react/wallet-data/-/wallet-data-5.0.0-alpha.0.tgz#07eb6f500ba43ab6a26a8552a6d282ab76c87e4c"
+  integrity sha512-F2A7WB4fmsACKfKpP8a3lHY+4+5DoBtuJto4vFe+Oj2Asow0EJABqLphom+QrvrwwlazllpCqRp3JvYmDI+/Rg==
   dependencies:
-    "@soroban-react/connect-button" "^4.5.2"
-    "@soroban-react/core" "^4.5.2"
+    "@soroban-react/connect-button" "^5.0.0-alpha.0"
+    "@soroban-react/core" "^5.0.0-alpha.0"
     "@soroban-react/types" "^4.0.0"
     soroban-client "0.7.2"
 
-"@stellar/freighter-api@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@stellar/freighter-api/-/freighter-api-1.3.1.tgz#8cd38d054f9b670ed64a226164b92a63b3aedbc7"
-  integrity sha512-Up8TjHxhw6NCZb1qA1O2jlnnRrd5ZKs9ZHLGa2D501HmVD4yav2SKiuG18xe/PMsbg3S4mAIN4nhG+c06wPCYw==
+"@stellar/freighter-api@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@stellar/freighter-api/-/freighter-api-1.4.0.tgz#f53ab58792733caa1fe33d60050ec24164e331f3"
+  integrity sha512-/ANu1/4mnReUvrSDveKj5XhrnafEssESF/lVdOR1v0ja02kFuhsdsw3anzdz0NvPaPbFgPmjU+v9t9R8KN6r+g==
 
 "@swc/helpers@0.4.14":
   version "0.4.14"

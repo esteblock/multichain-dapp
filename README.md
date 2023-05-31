@@ -1,4 +1,18 @@
 # Multichain Dapp
+
+1.- Set Futurenet and Standalone networks in your wallet:
+   |   |   |
+   |---|---|
+   | Name | Standalone |
+   | URL | http://localhost:8000/soroban/rpc |
+   | Passphrase | Standalone Network ; February 2017 |
+   
+   |   |   |
+   |---|---|
+   | Name | Futurenet Local RPC|
+   | URL | http://localhost:8000/soroban/rpc |
+   | Passphrase | Test SDF Future Network ; October 2022 |
+
 ```
 ./quickstart.sh standalone
 docker exec soroban-preview-8 ./initialize.sh
