@@ -48,60 +48,13 @@ export function SetTitleButton (
                 params: [stringToScVal(newTitle)]
             })
 
-            // let source = new SorobanClient.Account(address, sequence)
-            // let transaction = contractTransaction({
-            //     networkPassphrase: activeChain.networkPassphrase,
-            //     source: source,
-            //     contractId: Constants.TokenId_1,
-            //     method: 'xfer',
-            //     params: [invoker, nonce, contractIdentifier(Constants.LiquidityPoolId), bigNumberToI128(BigNumber(inputTokenAmount).shiftedBy(7))]
-            // })
-            // try{
-            // 
-            // 
-            
-            // let result
-            // result1 = await sendTransaction(
-            //     contractTransaction({
-            //         networkPassphrase: activeChain.networkPassphrase,
-            //         source: source,
-            //         contractId: Constants.TokenId_1,
-            //         method: 'xfer',
-            //         params: [invoker, nonce, contractIdentifier(Constants.LiquidityPoolId), bigNumberToI128(BigNumber(inputTokenAmount).shiftedBy(7))]
-            //     }), {sorobanContext})
+            console.log("created transaction: ", transaction)
 
             
+            let result
+            result = await sendTransaction(transaction, {sorobanContext})
+            console.log("sendTransaction:result: ", result)
             
-            //     console.log("result1: ", result1)
-                
-            // let transaction
-            // if (outputToken == currencies[1]){
-            //     transaction = contractTransaction({
-            //         networkPassphrase: activeChain.networkPassphrase,
-            //         source: source,
-            //         contractId: Constants.LiquidityPoolId,
-            //         method: 'swap',
-            //         params: [accountIdentifier(address), bigNumberToI128(BigNumber(0)), bigNumberToI128(BigNumber(outputTokenAmount).shiftedBy(7))]})
-    
-            // }
-            // else{
-
-            //     transaction = contractTransaction({
-            //         networkPassphrase: activeChain.networkPassphrase,
-            //         source: source,
-            //         contractId: Constants.LiquidityPoolId,
-            //         method: 'swap',
-            //         params: [accountIdentifier(address), bigNumberToI128(BigNumber(outputTokenAmount).shiftedBy(7)), bigNumberToI128(BigNumber(0))]})
-
-            // }
-            //     console.log("Sending swap transaction")
-            //     const result = await sendTransaction(transaction, {sorobanContext})
-            //     console.log("swap:sendTransaction:result: ", result)
-            // }
-            // catch(error){
-            //     console.log("Error while sending the transaction: ", error)
-
-            // }
 
             alert(newTitle)
         }

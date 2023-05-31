@@ -17,6 +17,11 @@ export function scvalToString(value: SorobanClient.xdr.ScVal): string | undefine
 // }
 
 
+// function stringToScVal(title: string){
+//   return SorobanClient.xdr.ScVal.scvString(title);
+// }
+
+
 interface useTitleProps {
   sorobanContext: SorobanContextType
 }
@@ -38,12 +43,12 @@ export function useTitle({sorobanContext}: useTitleProps){
         sorobanContext: sorobanContext
       })
 
-      console.log("title_scval ", title_scval)
+      console.log("Reading the contract: title_scval ", title_scval)
 
       if(title_scval.result){
         //token.symbol.result && convert.scvalToString(token.symbol.result)?.replace("\u0000", "")
         title = title_scval.result && scvalToString(title_scval.result)?.replace("\u0000", "")
-        
+        console.log("Reading the contract: title ", title)
         return title
       }
 
