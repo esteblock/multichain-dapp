@@ -19,7 +19,7 @@ do
     SOROBAN_RPC_URL="$SOROBAN_RPC_HOST/soroban/rpc"
     SOROBAN_NETWORK_PASSPHRASE="Standalone Network ; February 2017"
     FRIENDBOT_URL="$SOROBAN_RPC_HOST/friendbot"
-    NEW_TITLE="I love Standalone"
+    NEW_TITLE="love_standalone"
     ;;
     futurenet)
     echo "Using Futurenet network"
@@ -27,7 +27,7 @@ do
     SOROBAN_RPC_URL="$SOROBAN_RPC_HOST/soroban/rpc"
     SOROBAN_NETWORK_PASSPHRASE="Test SDF Future Network ; October 2022"
     FRIENDBOT_URL="https://friendbot-futurenet.stellar.org/"
-    NEW_TITLE="I prefer Futurenet"
+    NEW_TITLE="prefer_futurenet"
     ;;
     *)
     echo "Usage: $0 standalone|futurenet"
@@ -80,7 +80,7 @@ do
             --id $TITLE_ID \
             -- \
             set_title   \
-            --title "{\"string\":\"$NEW_TITLE\"}"
+            --title "{\"symbol\":\"$NEW_TITLE\"}"
         echo "--"
         echo "--"
 
