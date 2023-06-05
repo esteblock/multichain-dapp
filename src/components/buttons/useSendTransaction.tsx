@@ -92,6 +92,10 @@ export function useSendTransaction<E = Error>(defaultTxn?: Transaction, defaultO
     let activeConnector = sorobanContext?.activeConnector
     let server = sorobanContext?.server
 
+    console.log("useSendTransaction: activeChain: ", activeChain)
+    console.log("useSendTransaction: activeConnector: ", activeConnector)
+    console.log("useSendTransaction: server: ", server)
+
     const {
       timeout,
       skipAddingFootprint,
@@ -111,6 +115,7 @@ export function useSendTransaction<E = Error>(defaultTxn?: Transaction, defaultO
       if (!txn) {
         throw new Error("No transaction after adding footprint");
       }
+      console.log("tx after footprint: ", txn)
     }
 
     let signed = "";
@@ -120,16 +125,12 @@ export function useSendTransaction<E = Error>(defaultTxn?: Transaction, defaultO
       txn.sign(keypair);
       signed = txn.toXDR();
     } else {
-      console.log("will send to connector")
+      console.log("User has not set a secretKey, txn will be signed using the Connector (wallet) provided in the sorobanContext")
       // User has not set a secretKey, txn will be signed using the Connector (wallet) provided in the sorobanContext
-      try{
-
-        signed = await activeConnector.signTransaction(txn.toXDR(), { networkPassphrase });
-      }
-      catch(error){
-        console.log("error sending to connector: ", error)
-      }
-      console.log("sent to connector")
+      let txn_to_xdr=txn.toXDR()
+      console.log("txn_to_xdr: ", txn_to_xdr)
+      signed = await activeConnector.signTransaction(txn.toXDR(), { networkPassphrase });
+      console.log("signed: ", signed)
     }
 
     const transactionToSubmit = SorobanClient.TransactionBuilder.fromXDR(signed, networkPassphrase);

@@ -1,7 +1,8 @@
 import React from 'react'
 import {useSorobanReact } from "@soroban-react/core"
 import Button from '@mui/material/Button';
-import {useSendTransaction, contractTransaction} from '@soroban-react/contracts'
+import {contractTransaction} from '@soroban-react/contracts'
+import {useSendTransaction} from './useSendTransaction'
 import * as SorobanClient from 'soroban-client'
 import contract_ids from '../../contract_ids.json'
 import BigNumber from 'bignumber.js'
@@ -12,7 +13,8 @@ interface SetTitleButtonProps {
 }
 
 function stringToScVal(title: string){
-    let new_title_scval = SorobanClient.xdr.ScVal.scvString(title)
+    console.log("will set tile")
+    let new_title_scval = SorobanClient.xdr.ScVal.scvSymbol(title)
     console.log("new_title_scval: ", new_title_scval)
     return new_title_scval;
 }
