@@ -11,17 +11,6 @@ export function scvalToString(value: SorobanClient.xdr.ScVal): string | undefine
   return value.value()?.toString();
 }
 
-// export function scvalToString(value: SorobanClient.xdr.ScVal): string | undefined {
-//   console.log("value: ", value)
-//   return value.bytes().toString();
-// }
-
-
-// function stringToScVal(title: string){
-//   return SorobanClient.xdr.ScVal.scvString(title);
-// }
-
-
 interface useTitleProps {
   sorobanContext: SorobanContextType
 }
