@@ -13,7 +13,7 @@ export default function ButtonAppBar() {
       <AppBar position="sticky">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Soroswap! AMM in Soroban
+            Soroban Multichain Dapp with @soroban-react
           </Typography>
           <WalletData sorobanContext={sorobanContext} />
         </Toolbar>
