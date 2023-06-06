@@ -1,16 +1,9 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import { Typography } from '@mui/material';
 import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
 import OutlinedInput from '@mui/material/OutlinedInput';
-import InputAdornment from '@mui/material/InputAdornment';
 
-
-import {SetTitleButton} from './buttons/SetTitleButton'
-
+import {SetTitleButton} from './SetTitleButton'
 import { useSorobanReact } from '@soroban-react/core';
 import { useTitle } from '../hooks/useTitle';
 
@@ -25,32 +18,20 @@ export const Title : React.FunctionComponent = () => {
   };
 
     return (   
-    <Card sx={{ maxWidth: 345 }}>
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-       Title: {myTitle}
-        </Typography>
+    <Card >
+        <h1> Title: {myTitle} </h1>
+        <br/>
         <FormControl>
-          <InputLabel htmlFor="outlined-adornment-amount">Set a new title</InputLabel>
+          Set new title:
           <OutlinedInput
-            
             type="text"
-            id="outlined-adornment-amount"
-            startAdornment={<InputAdornment position="start">
-            </InputAdornment>}
-             value={newTitle}
+            value={newTitle}
             onChange={handleNewTitleChange}
-            label="New title"
           />
         </FormControl>
-
-      </CardContent>
-       <CardActions>
-        <SetTitleButton
-          newTitle={newTitle}
-        ></SetTitleButton>
-      </CardActions>
-      
+        <br/>
+        <br/>
+        <SetTitleButton newTitle={newTitle}/>  
     </Card>
   );
 }
