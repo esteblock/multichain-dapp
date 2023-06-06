@@ -6,7 +6,7 @@
 ![Multichain Demo 2](https://github.com/esteblock/multichain-dapp/assets/2274485/55543d79-9dc9-4543-bbd3-d90f1a3ae0d5)
 
 # How does it works?
-From @soroban-react v5.0.3 you can set several networks for your dapp to be contected to.
+From @soroban-react v5.0.3 (currently supporting preview 9) you can set several networks for your dapp to be contected to.
 
 Just import those networks when creating your Soroban React Provider using
 ```javascript
@@ -84,6 +84,40 @@ bash initialize.sh
 ```
 
 This will compile the smart contract and deploy them both in Standalone and Futurenet.
+You should see some output like:
+```bash
+Using ARGS: --network standalone --source title-admin
+--
+--
+Deploy the title contract
+Contract deployed in standalone network succesfully with ID: e0019c10d10747ce41e3c082b7781915933ce22f3b6cd4b319dfe14477cd45b3
+--
+--
+Setting the first title: My standalone title
+
+--
+--
+Reading the  read_title function value
+"I love Standalone"
+.....
+.....
+Using ARGS: --network futurenet --source title-admin
+--
+--
+Deploy the title contract
+Contract deployed in futurenet network succesfully with ID: a1a91a0de70332af2ebb427177663576e42ca364be10d9a4126dcd7b1d951127
+--
+--
+Setting the first title: My futurenet title
+
+--
+--
+Reading the  read_title function value
+"I prefer Futurenet"
+
+```
+
+
 Finally it will create a `src/contract_ids.json` that should look like this:
 
 ```json
@@ -111,7 +145,7 @@ Configure your Local Futurenet network in Freighter
    |   |   |
    |---|---|
    | Name | Futurenet Local RPC|
-   | URL | http://localhost:8000/soroban/rpc |
+   | URL | http://localhost:8001/soroban/rpc |
    | Passphrase | Test SDF Future Network ; October 2022 |
 
 
