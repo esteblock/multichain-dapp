@@ -1,11 +1,9 @@
 import React from 'react'
 import {useSorobanReact } from "@soroban-react/core"
 import Button from '@mui/material/Button';
-import {contractTransaction} from '@soroban-react/contracts'
-import {useSendTransaction} from './useSendTransaction'
+import {contractTransaction, useSendTransaction} from '@soroban-react/contracts'
 import * as SorobanClient from 'soroban-client'
 import contract_ids from '../../contract_ids.json'
-import BigNumber from 'bignumber.js'
 
 
 interface SetTitleButtonProps {
@@ -13,10 +11,7 @@ interface SetTitleButtonProps {
 }
 
 function stringToScVal(title: string){
-    console.log("will set tile")
-    let new_title_scval = SorobanClient.xdr.ScVal.scvSymbol(title)
-    console.log("new_title_scval: ", new_title_scval)
-    return new_title_scval;
+    return SorobanClient.xdr.ScVal.scvString(title)
 }
 
 
@@ -33,13 +28,11 @@ export function SetTitleButton (
             return
         }
         else{
-            console.log("trying to set new title: ", newTitle)
-            console.log("sorobanContext.activeChain?.name?.toLocaleLowerCase(): ", sorobanContext.activeChain?.name?.toLocaleLowerCase())
             let currentChain = sorobanContext.activeChain?.name?.toLocaleLowerCase()
             console.log("currentChain: ", currentChain)
             console.log("contract_ids[currentChain].title_id: ", contract_ids[currentChain]?.title_id)
             let contractId = contract_ids[currentChain]?.title_id;
-
+            
             const source = await server.getAccount(address)
             
             let transaction = contractTransaction({
@@ -50,15 +43,10 @@ export function SetTitleButton (
                 params: [stringToScVal(newTitle)]
             })
 
-            console.log("created transaction: ", transaction)
-
             
-            let result
-            result = await sendTransaction(transaction, {sorobanContext})
-            console.log("sendTransaction:result: ", result)
-            
-
-            alert(newTitle)
+            let result = await sendTransaction(transaction, {sorobanContext})
+            // Reconnect to update values
+            sorobanContext.connect();
         }
 
     }
