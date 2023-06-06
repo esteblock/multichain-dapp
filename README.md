@@ -1,4 +1,5 @@
-![Multichain Demo 1](https://github.com/esteblock/multichain-dapp/assets/2274485/e9003808-575d-47b1-9cd1-43afa77317fe)
+![scaled50_1](https://github.com/esteblock/multichain-dapp/assets/2274485/be35b713-7da5-4bc6-90da-90954c906167)
+
 
 ![Multichain Demo 2](https://github.com/esteblock/multichain-dapp/assets/2274485/55543d79-9dc9-4543-bbd3-d90f1a3ae0d5)
 
