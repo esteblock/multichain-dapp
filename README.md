@@ -62,9 +62,9 @@ This will open a standalone network in http://localhost:8000
 
 In another terminal do:
 ```bash
-bash quickstart.sh standalone
+bash quickstart.sh futurenet
 ```
-This will open a standalone network in http://localhost:8001
+This will open a futurenet rpc in http://localhost:8001
 
 This, apart of creating a Standalone and Futurenet instance in your machine, it will also create a soroban-preview-9 container using the `esteblock/soroban-preview:9` image, that will help you to compile the test smart contract available in `./contract`
 
