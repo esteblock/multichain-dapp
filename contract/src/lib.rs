@@ -1,22 +1,22 @@
 #![no_std]
-use soroban_sdk::{contractimpl, Env, Symbol, String};
+use soroban_sdk::{contract, contractimpl, Env, Symbol, symbol_short, String};
 
-const TITLE: Symbol = Symbol::short("TITLE");
+const TITLE: Symbol = symbol_short!("TITLE");
 
+
+#[contract]
 pub struct TitleContract;
 
 #[contractimpl]
 impl TitleContract {
 
-
     pub fn set_title(env: Env, title: String) {
-                env.storage().set(&TITLE, &title)
+                env.storage().instance().set(&TITLE, &title)
     }
 
     pub fn read_title(env: Env) -> String {
-        env.storage().get(&TITLE)
-            .unwrap_or(Ok(String::from_slice(&env, "Default Title")))
-            .unwrap() 
+        env.storage().instance().get(&TITLE)
+            .unwrap_or(String::from_slice(&env, "Default Title"))
     }
     
 } 

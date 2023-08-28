@@ -1,3 +1,6 @@
+previewVersion="10"
+quickstartHash="8a99332f834ca82e3ac1418143736af59b5288e792d1c4278d6c547c6ed8da3b"
+
 #!/bin/bash
 
 set -e
@@ -30,7 +33,6 @@ echo "1. Creating docker soroban network"
 
 
 echo "2. Running a soroban-preview docker container"
-previewVersion="9"
 
 echo "Searching for a previous soroban-preview docker container"
 containerID=$(docker ps --filter=`name=soroban-preview-${previewVersion}` --all --quiet)
@@ -59,7 +61,7 @@ docker run --rm -ti \
   --name $STELLAR_NAME \
   --network soroban-network \
   -p $LOCAL_PORT:8000 \
-  stellar/quickstart:soroban-dev@sha256:57e8ab498bfa14c65595fbb01cb94b1cdee9637ef2e6634e59d54f6958c05bdb \
+  stellar/quickstart:soroban-dev@sha256:$quickstartHash \
   $ARGS \
   --enable-soroban-rpc \
   --protocol-version 20 \

@@ -6,7 +6,7 @@
 ![Multichain Demo 2](https://github.com/esteblock/multichain-dapp/assets/2274485/55543d79-9dc9-4543-bbd3-d90f1a3ae0d5)
 
 # How does it works?
-From @soroban-react v5.0.3 (currently supporting preview 9) you can set several networks for your dapp to be contected to.
+From @soroban-react v5.0.3 (currently supporting preview 10) you can set several networks for your dapp to be contected to.
 
 Just import those networks when creating your Soroban React Provider using
 ```javascript
@@ -66,19 +66,19 @@ bash quickstart.sh futurenet
 ```
 This will open a futurenet rpc in http://localhost:8001
 
-This, apart of creating a Standalone and Futurenet instance in your machine, it will also create a soroban-preview-9 container using the `esteblock/soroban-preview:9` image, that will help you to compile the test smart contract available in `./contract`
+This, apart of creating a Standalone and Futurenet instance in your machine, it will also create a soroban-preview-10 container using the `esteblock/soroban-preview:10` image, that will help you to compile the test smart contract available in `./contract`
 
 All of 3 docker containers will be running in a common `soroban-network` docker network.
 
 
-3.- Run a bash terminal of `soroban-preview-9`
+3.- Run a bash terminal of `soroban-preview-10`
 Just with 
 ```bash
 bash run.sh
 ```
 
 4.- Compile the **Title** Smart contract and deploy it in both chains:
-Inside the `soroban-preview-9` container, run
+Inside the `soroban-preview-10` container, run
 ```
 bash initialize.sh
 ```
