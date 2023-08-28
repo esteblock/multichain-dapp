@@ -22,7 +22,7 @@ export function useTitle({sorobanContext}: useTitleProps){
       // console.log("useTitle: contract_ids[currentChain].title_id: ", contract_ids[currentChain]?.title_id)
       
       title_scval = useContractValue({ 
-        contractId: contract_ids[currentChain]?.title_id,
+        contractAddress: contract_ids[currentChain]?.title_id,
         method: 'read_title',
         sorobanContext: sorobanContext
       })

@@ -37,9 +37,9 @@ export function SetTitleButton ({newTitle}: SetTitleButtonProps){
             let transaction = contractTransaction({
                 networkPassphrase: activeChain.networkPassphrase,
                 source: source,
-                contractId: contractId,
+                contractAddress: contractId,
                 method: 'set_title',
-                params: [stringToScVal(newTitle)]
+                args: [stringToScVal(newTitle)]
             })
 
             
