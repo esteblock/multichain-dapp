@@ -142,17 +142,21 @@ Configure your Standalone network in Freighter
    |   |   |
    |---|---|
    | Name | Local Standalone |
-   | HORIZON RPC URL | http://localhost:8000/soroban/rpc |
+   | HORIZON RPC URL | http://localhost:8000/ |
    | SOROBAN RPC URL | http://localhost:8000/soroban/rpc |
    | Passphrase | Standalone Network ; February 2017 |
+   | Allow HTTP connection | Enabled |
+   | Switch to this network | Enabled |
    
 Configure your Local Futurenet network in Freighter
    |   |   |
    |---|---|
    | Name | Local Futurenet|
-   | HORIZON RPC URL | http://localhost:8001/soroban/rpc |
+   | HORIZON RPC URL | http://localhost:8001/ |
    | SOROBAN RPC URL | http://localhost:8001/soroban/rpc |
    | Passphrase | Test SDF Future Network ; October 2022 |
+   | Allow HTTP connection | Enabled |
+   | Switch to this network | Enabled |
 
 ** Important:** You should also do: Preferences> Allow experimental mode
 
