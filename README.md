@@ -154,6 +154,7 @@ Configure your Local Futurenet network in Freighter
    | SOROBAN RPC URL | http://localhost:8001/soroban/rpc |
    | Passphrase | Test SDF Future Network ; October 2022 |
 
+** Important:** You should also do: Preferences> Allow experimental mode
 
 6.- Fund your account using the friendbot
 For the standalone network is just as easy as typing in your browser:
