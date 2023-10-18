@@ -1,5 +1,5 @@
-previewVersion="10"
-quickstartHash="8a99332f834ca82e3ac1418143736af59b5288e792d1c4278d6c547c6ed8da3b"
+previewVersion=$(jq -r '.previewVersion' preview_version.json)
+quickstartHash=$(jq -r '.quickstartHash' preview_version.json)
 
 #!/bin/bash
 
@@ -61,7 +61,7 @@ docker run --rm -ti \
   --name $STELLAR_NAME \
   --network soroban-network \
   -p $LOCAL_PORT:8000 \
-  stellar/quickstart:soroban-dev@sha256:$quickstartHash \
+  stellar/quickstart:$quickstartHash \
   $ARGS \
   --enable-soroban-rpc \
   --protocol-version 20 \

@@ -6,7 +6,7 @@
 ![Multichain Demo 2](https://github.com/esteblock/multichain-dapp/assets/2274485/55543d79-9dc9-4543-bbd3-d90f1a3ae0d5)
 
 # How does it works?
-From @soroban-react v5.0.3 (currently supporting preview 10) you can set several networks for your dapp to be contected to.
+Since @soroban-react v5.0.3 (Currently we are on version [![npm version](https://img.shields.io/npm/v/@soroban-react/core/latest.svg)](https://www.npmjs.com/package/@soroban-react/core/v/latest) supporting preview 11) you can set several networks for your dapp to be contected to.
 
 Just import those networks when creating your Soroban React Provider using
 ```javascript
@@ -41,6 +41,10 @@ const connectors: Connector[] = [freighter()]
 
 # How to test this repo?
 
+0.-  Requirements
+- node
+- Freighter wallet 5.6.4
+
 1.- Clone & install:
 
 ```bash
@@ -66,19 +70,19 @@ bash quickstart.sh futurenet
 ```
 This will open a futurenet rpc in http://localhost:8001
 
-This, apart of creating a Standalone and Futurenet instance in your machine, it will also create a soroban-preview-10 container using the `esteblock/soroban-preview:10` image, that will help you to compile the test smart contract available in `./contract`
+This, apart of creating a Standalone and Futurenet instance in your machine, it will also create a soroban-preview-11 container using the `esteblock/soroban-preview:11` image, that will help you to compile the test smart contract available in `./contract`
 
 All of 3 docker containers will be running in a common `soroban-network` docker network.
 
 
-3.- Run a bash terminal of `soroban-preview-10`
+3.- Run a bash terminal of `soroban-preview-11`
 Just with 
 ```bash
 bash run.sh
 ```
 
 4.- Compile the **Title** Smart contract and deploy it in both chains:
-Inside the `soroban-preview-10` container, run
+Inside the `soroban-preview-11` container, run
 ```
 bash initialize.sh
 ```
@@ -137,15 +141,17 @@ Remember that your local futurenet node is running at http://localhost:8001
 Configure your Standalone network in Freighter
    |   |   |
    |---|---|
-   | Name | Standalone |
-   | URL | http://localhost:8000/soroban/rpc |
+   | Name | Local Standalone |
+   | HORIZON RPC URL | http://localhost:8000/soroban/rpc |
+   | SOROBAN RPC URL | http://localhost:8000/soroban/rpc |
    | Passphrase | Standalone Network ; February 2017 |
    
 Configure your Local Futurenet network in Freighter
    |   |   |
    |---|---|
-   | Name | Futurenet Local RPC|
-   | URL | http://localhost:8001/soroban/rpc |
+   | Name | Local Futurenet|
+   | HORIZON RPC URL | http://localhost:8001/soroban/rpc |
+   | SOROBAN RPC URL | http://localhost:8001/soroban/rpc |
    | Passphrase | Test SDF Future Network ; October 2022 |
 
 
