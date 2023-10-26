@@ -425,52 +425,52 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.3.3.tgz#16ab6c727d8c2020a5b6e4a176a243ecd88d8d69"
   integrity sha512-0xd7qez0AQ+MbHatZTlI1gu5vkG8r7MYRUJAHPAHJBmGLs16zpkrpAVLvjQKQOqaXPDUBwOiJzNc00znHSCVBw==
 
-"@soroban-react/chains@7.1.0":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@soroban-react/chains/-/chains-7.1.0.tgz#ccee0e1eab7b6efad6d7ac292f3ec76432e5e60c"
-  integrity sha512-10o7G2l3hsvIgv5YdJlSFV0vCglDs1GNuiQZatqSQK2EV6IYj/BeHclAvvxgHw1HNa1B4FOINmB15Ws90VsyiQ==
+"@soroban-react/chains@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@soroban-react/chains/-/chains-7.1.1.tgz#85ac9ee66af00764d338c7bc1176cf6fb7277757"
+  integrity sha512-vn8iDr+3/m2qFHYYUf4pr1vIEVYToo8UBCPSi+HUvBscjP75qsWYp3DUFeiHXDl+59HBzNLUBSa/t48f0pL72A==
   dependencies:
-    "@soroban-react/types" "^7.0.0"
+    "@soroban-react/types" "^7.1.1"
     soroban-client "1.0.0-beta.2"
 
-"@soroban-react/connect-button@^7.1.0":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@soroban-react/connect-button/-/connect-button-7.1.0.tgz#4acef01eb19223dbe3f72415565ed32f61ab783c"
-  integrity sha512-5GKr86lNvRO3oE3IpugulYgb7uHwEC+JG6IlUOSRJNbpaWgVimmq2ZEbpuNs8i8z5wPJS+2A0bV0CGhlhipa+w==
+"@soroban-react/connect-button@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@soroban-react/connect-button/-/connect-button-7.1.1.tgz#bc2dea5107f740f009dbe5c31b8522442a95081a"
+  integrity sha512-hhag9edwuL4caqSzhOYGqf/O5CatrDkxg06BdjrwMKrJg5wrQq77D3nXLQGP6SXmitXoFzRfOmFNxDcfFpbmCw==
   dependencies:
-    "@soroban-react/core" "^7.1.0"
+    "@soroban-react/core" "^7.1.1"
 
-"@soroban-react/contracts@7.1.0":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@soroban-react/contracts/-/contracts-7.1.0.tgz#1ed2e83ea36549cc5dab3f0b47150a3688bc2fba"
-  integrity sha512-NntFcyQ9OAvbjUaCAmJJbLCC/P1jsUypkBBwVn+pg9k5qjJvkmrFw1wed5Zg44cuAM5HOVIE4Fe0eazZf4p21g==
+"@soroban-react/contracts@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@soroban-react/contracts/-/contracts-7.1.1.tgz#2620dd63e18f5e173f46df85353418fbab96b9ed"
+  integrity sha512-zmM96lbdH/zCALjlT+L1mqoP2mMN6jPdpNhxGOCpgEWzUFSLIoKhyIMHnNn76CxoXtN+OcnIEB4cW/P+kVjcJw==
   dependencies:
-    "@soroban-react/core" "^7.1.0"
+    "@soroban-react/core" "^7.1.1"
     soroban-client "1.0.0-beta.2"
 
-"@soroban-react/core@7.1.0", "@soroban-react/core@^7.1.0":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@soroban-react/core/-/core-7.1.0.tgz#96691806de3d8e095201436060f9404f5104c8bf"
-  integrity sha512-QebVs+J4fNQAUGgcHdlHMJSt0mRdFOnfrNAQNSwNCbvo/SwBYLZ+9HPvi2mEyNsSo2z6KT2Y1tzI+NzttZoW1Q==
+"@soroban-react/core@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@soroban-react/core/-/core-7.1.1.tgz#316f1eee27ef8ec4a20563693b07d05b130f8116"
+  integrity sha512-PGsMi9ourF56X76iEYDbuk9TjykMOEHxX9+NKgMvx9Qsg/gIOnCCYKgECn000J4qs+P9/e4OaP2uUM3//kG+ew==
   dependencies:
-    "@soroban-react/freighter" "^7.0.0"
-    "@soroban-react/types" "^7.0.0"
+    "@soroban-react/freighter" "^7.1.1"
+    "@soroban-react/types" "^7.1.1"
     soroban-client "1.0.0-beta.2"
 
-"@soroban-react/freighter@7.0.0", "@soroban-react/freighter@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@soroban-react/freighter/-/freighter-7.0.0.tgz#3df9355cf7396ee3eaf2ad3b25790083655abe85"
-  integrity sha512-WMOlOyfqqOnJHIsv53s2kfVZMiuL4rJY0XJpXVixPuR/jZOVgeKeZepeY0uIOuxs61Gn0tDIcNMXR40Aj3QbGQ==
+"@soroban-react/freighter@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@soroban-react/freighter/-/freighter-7.1.1.tgz#cf260c800dc2856b1edb4b3c72cae3bde0b84fc2"
+  integrity sha512-pzlkQFru8pWpIkI+08XxYkH0+kUQ5ytZQE65zRu0rRTBPtsEdUYcOx8Y3xhIqSZptfgM4lX0husLSn1KS0kyiw==
   dependencies:
-    "@soroban-react/types" "^7.0.0"
-    "@stellar/freighter-api" "1.6.0"
+    "@soroban-react/types" "^7.1.1"
+    "@stellar/freighter-api" "1.7.1"
 
-"@soroban-react/types@7.0.0", "@soroban-react/types@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@soroban-react/types/-/types-7.0.0.tgz#602c230ef493766d3d7524f6bd8199c989c82347"
-  integrity sha512-kYpMQ3P8AhrW/ldmurZTk8O5wYJ1rzibFnp/uTT7utWYL9ocvKJ9kOokqI84Ob6Ux2IrMbmx2ktjuybzLqdDyg==
+"@soroban-react/types@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@soroban-react/types/-/types-7.1.1.tgz#6521702b36de309367d9376755f3293f30905778"
+  integrity sha512-jctPg3Z/Wi2okkdaF9ceaIKjTahGyczzSSnsFJJLYoNdgu3hpKwPIUzI83YauwreM10acDs2bPJmYQ6NqUerUA==
 
-"@soroban-react/utils@7.1.0":
+"@soroban-react/utils@^7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@soroban-react/utils/-/utils-7.1.0.tgz#eef4ceae1918b25d5777f4715313abab0aca95a6"
   integrity sha512-r0OOMF/ObMvPKjPIHMYMeQCiza+Hz2t2I0pnx67ttdyGrd/Y9ZHFeV9fhUUxahPEnoFkXt1KMDpXgyODTY4+RQ==
@@ -478,20 +478,20 @@
     bignumber.js "^9.1.1"
     soroban-client "1.0.0-beta.2"
 
-"@soroban-react/wallet-data@7.1.0":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@soroban-react/wallet-data/-/wallet-data-7.1.0.tgz#a5c6fcdf9069dd80ac32668197af35420513be71"
-  integrity sha512-FLR5+mgU4kfNByHtfjymkvuYCmP4TeOXvSw6V2lPwM6wmN5l23OjhlShFGV9985WVP5KBey/YajS9GH7anibZw==
+"@soroban-react/wallet-data@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@soroban-react/wallet-data/-/wallet-data-7.1.1.tgz#a7398a28268efeb1fd1312a1f7f3b1c7afeb494a"
+  integrity sha512-GVQkFn5cUmRN4J9FSnVV6td9/1CJi8haTzz/F3l36O0mzrollCiC+lHllIcka63hBJy5TscnzCHk/LAZKs/Osw==
   dependencies:
-    "@soroban-react/connect-button" "^7.1.0"
-    "@soroban-react/core" "^7.1.0"
-    "@soroban-react/types" "^7.0.0"
+    "@soroban-react/connect-button" "^7.1.1"
+    "@soroban-react/core" "^7.1.1"
+    "@soroban-react/types" "^7.1.1"
     soroban-client "1.0.0-beta.2"
 
-"@stellar/freighter-api@1.6.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@stellar/freighter-api/-/freighter-api-1.6.0.tgz#14deceba47be041ed13a325aad6d05add6646a08"
-  integrity sha512-Z6CRY+3+whzMspda6PiHEc4Rs9tdQkHLin9FopdnHhij/FEEAK+IiuF8Ki2ROcQweXdazb8N237aSim10s+Zgw==
+"@stellar/freighter-api@1.7.1":
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/@stellar/freighter-api/-/freighter-api-1.7.1.tgz#d62b432abc7e0140a6025cd672455ecee7b3199a"
+  integrity sha512-XvPO+XgEbkeP0VhP0U1edOkds+rGS28+y8GRGbCVXeZ9ZslbWqRFQoETAdX8IXGuykk2ib/aPokiLc5ZaWYP7w==
 
 "@swc/helpers@0.4.14":
   version "0.4.14"
