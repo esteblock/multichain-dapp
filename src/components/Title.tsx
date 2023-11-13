@@ -10,6 +10,8 @@ import { useTitle } from '../hooks/useTitle';
 export const Title : React.FunctionComponent = () => {
  
   const sorobanContext = useSorobanReact()
+  console.log("🚀 ~ file: Title.tsx:13 ~ sorobanContext:", sorobanContext)
+  
   const myTitle = useTitle({sorobanContext})
   const [newTitle, setNewTitle] = React.useState<string>(''); 
 
