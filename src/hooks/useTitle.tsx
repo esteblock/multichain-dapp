@@ -1,5 +1,5 @@
 import * as SorobanClient from 'soroban-client';
-import { SorobanContextType } from '@soroban-react/core';
+import { SorobanContextType } from '';
 import { useContractValue } from '@soroban-react/contracts'
 
 import contract_ids from '../contract_ids.json'
@@ -26,6 +26,8 @@ export function useTitle({sorobanContext}: useTitleProps){
         method: 'read_title',
         sorobanContext: sorobanContext
       })
+      
+      console.log("🚀 ~ file: useTitle.tsx:25 ~ useTitle ~ title_scval:", title_scval)
 
 
       if(title_scval.result){
@@ -34,5 +36,5 @@ export function useTitle({sorobanContext}: useTitleProps){
         return title
       }
 
-      return 'useTitle: wrong connection'
+      //return ''
 }
