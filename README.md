@@ -141,20 +141,22 @@ Remember that your local futurenet node is running at http://localhost:8001
 Configure your Standalone network in Freighter
    |   |   |
    |---|---|
-   | Name | Local Standalone |
+   | Name | Local Standalone 8000 |
    | HORIZON RPC URL | http://localhost:8000/ |
    | SOROBAN RPC URL | http://localhost:8000/soroban/rpc |
    | Passphrase | Standalone Network ; February 2017 |
+   | Friendbot | http://localhost:8000/friendbot |
    | Allow HTTP connection | Enabled |
    | Switch to this network | Enabled |
    
 Configure your Local Futurenet network in Freighter
    |   |   |
    |---|---|
-   | Name | Local Futurenet|
+   | Name | Local Futurenet 8001 |
    | HORIZON RPC URL | http://localhost:8001/ |
    | SOROBAN RPC URL | http://localhost:8001/soroban/rpc |
    | Passphrase | Test SDF Future Network ; October 2022 |
+   | Friendbot | http://localhost:8001/friendbot |
    | Allow HTTP connection | Enabled |
    | Switch to this network | Enabled |
 
